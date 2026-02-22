@@ -111,3 +111,12 @@ If you finish early or want an extra challenge, try one of these:
 - Stay curious. The unpredictability is intentional and part of the experience.
 
 When you finish, Playlist Chaos will feel more predictable, and you will have taken your first steps into AI-assisted debugging.
+___
+
+## TF Summary
+
+The core concept of this activity is for students to master conditional logic and state management by debugging a broken playlist application. 
+Many students will likely struggle with the search functionality, specifically when filtering for artists within categorized lists like the Hype mood.
+AI proves incredibly helpful for pinpointing specific logical errors when given detailed prompts--such as why a specific song like Blinding Lights isn't appearing--but it becomes misleading if simply asked to fix all issues without context.
+To get the most out of the tool, students must prompt the AI to reason through the code's execution path rather than just asking for a code snippet.
+As a TF, I would guide a student by asking them to trace exactly how the search filter interacts with the mood categories in playlist_logic.py. This approach ensures they understand the underlying data flow instead of relying on a quick AI-generated patch.
