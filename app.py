@@ -9,7 +9,7 @@ from playlist_logic import (
     lucky_pick,
     merge_playlists,
     normalize_song,
-    search_songs,
+    matches_search,
 )
 
 
@@ -277,7 +277,8 @@ def render_playlist(label, songs):
         return
 
     query = st.text_input(f"Search {label} playlist by artist", key=f"search_{label}")
-    filtered = search_songs(songs, query, field="artist")
+    # Use the centralized matches_search helper for UI-level filtering
+    filtered = [s for s in songs if matches_search(s, query, field="artist")]
 
     if not filtered:
         st.write("No matching songs.")
